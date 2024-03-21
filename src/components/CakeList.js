@@ -1,15 +1,27 @@
 import Cake from "./Cake";
+import Search from "./Search";
 
-const CakeList = ({cakes}) => {
+const CakeList = ({cakes, setCakes}) => {
 
-    const mapCakes = cakes.map((cake, index) => {
+    let mappedCakes = cakes.map((cake, index) => {
         return <Cake cake={cake} key={index} />
     });
 
+    const filterCakes = (searchTerm) => {
+        const filteredCakes = cakes.filter(cake => cake.cakeName.toLowerCase().includes(searchTerm));
+        setCakes(filteredCakes);
+    }
+
+    console.log(mappedCakes);
+
     return ( 
-        <ul>
-            {mapCakes}
-        </ul>
+        <>
+            <Search filterCakes={filterCakes}/>
+            <ul>
+                {mappedCakes}
+            </ul>
+        </>
+        
      );
 }
  

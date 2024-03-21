@@ -14,7 +14,7 @@ const Register = ({cakes, registerCake}) => {
             validation = false;
         }
 
-        if(cakes.find(cake => cake.cakeName === cakeName)){
+        if(cakes.find(cake => cake.cakeName.toLowerCase() === cakeName.toLowerCase())){
             alert("This cake already exists!");
             validation = false;
         }
@@ -52,12 +52,12 @@ const Register = ({cakes, registerCake}) => {
                     value={ingredients}
                     onChange={(event) => setIngredients([event.target.value])}
                 />
+                Rating:
                 <input
                     type="number"
                     min="0"
                     max="5"
                     name="rating"
-                    placeholder="Enter cake rating"
                     value={rating}
                     onChange={(event) => setRating(event.target.value)}
                 />

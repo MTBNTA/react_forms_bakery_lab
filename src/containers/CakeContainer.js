@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CakeList from "../components/CakeList";
 import Register from "../components/Register";
+import Search from "../components/Search";
 
 const CakeContainer = () => {
 
@@ -27,7 +28,7 @@ const CakeContainer = () => {
         }
     ]
 
-    const [cakes, setCakes] = useState([...initialData]);
+    const [cakes, setCakes] = useState(initialData);
 
     const registerCake = (newCake) => {
         setCakes([...cakes, newCake]);
@@ -35,7 +36,7 @@ const CakeContainer = () => {
 
     return (
         <>
-            <CakeList cakes={cakes} />
+            <CakeList cakes={cakes} setCakes={setCakes}/>
             <Register cakes={cakes} registerCake={registerCake} />
         </>
     );
