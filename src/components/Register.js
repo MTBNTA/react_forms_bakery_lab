@@ -1,4 +1,4 @@
-const Register = () => {
+const Register = ({cakes}) => {
     return ( 
         <></>
      );
