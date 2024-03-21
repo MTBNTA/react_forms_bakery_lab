@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+body{
+  background-color: #DBFCFF;
+  padding: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#cakeListContainer{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cake{
+  margin: 2%;
+  padding: 1em;
+  border-color: #7F96FF;
+  border-style: groove;
+  border-radius: 30px;
+  background-color: #ADBCFF;
+  width: 25%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#cakeForm{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+#cakeForm input{
+  margin: 0.25em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+  color: #320E3B;
+}
+
+h2{
+  color: #320E3B;
 }

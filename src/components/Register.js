@@ -37,7 +37,7 @@ const Register = ({cakes, registerCake}) => {
     return ( 
         <>
             <h2>Add a cake:</h2>
-            <form onSubmit={handleSubmit}>
+            <form id="cakeForm" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     name="cakeName"
@@ -52,12 +52,12 @@ const Register = ({cakes, registerCake}) => {
                     value={ingredients}
                     onChange={(event) => setIngredients([event.target.value])}
                 />
-                Rating:
                 <input
                     type="number"
                     min="0"
                     max="5"
                     name="rating"
+                    placeholder="Enter cake rating"
                     value={rating}
                     onChange={(event) => setRating(event.target.value)}
                 />

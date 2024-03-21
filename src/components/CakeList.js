@@ -17,7 +17,7 @@ const CakeList = ({cakes, setCakes}) => {
     return ( 
         <>
             <Search filterCakes={filterCakes}/>
-            <ul>
+            <ul id="cakeListContainer">
                 {mappedCakes}
             </ul>
         </>

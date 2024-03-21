@@ -1,4 +1,5 @@
 import CakeContainer from "./containers/CakeContainer";
+import "./App.css";
 
 function App() {
   return (
